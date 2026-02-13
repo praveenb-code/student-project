@@ -10,7 +10,6 @@ from django.utils.crypto import get_random_string
 
 def signup_view(request):
     if request.method == 'POST':
-        {% csrf_token %}
         first_name = request.POST['first_name']
         last_name = request.POST['last_name']
         email = request.POST['email']
@@ -43,7 +42,6 @@ def signup_view(request):
 
 def login_view(request):
     if request.method == 'POST':
-        {% csrf_token %}
         email = request.POST['email']
         password = request.POST['password']
         
