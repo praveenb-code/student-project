@@ -22,6 +22,12 @@ CSRF_TRUSTED_ORIGINS = [
     "https://student-project-kt18.onrender.com",
 ]
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
+
 
 
 # Application definition
