@@ -22,6 +22,6 @@ RUN python manage.py collectstatic --noinput
 #CMD ["gunicorn", "--bind", "0.0.0.0:8000", "Home.wsgi:application"]
 
 #CMD python manage.py migrate && python manage.py createsuperuser && gunicorn Home.wsgi:application --bind 0.0.0.0:$PORT
-CMD python manage.py migrate && python manage.py createsuperuser --noinput && gunicorn students.wsgi:application --bind 0.0.0.0:$PORT
+CMD python manage.py migrate && python manage.py createsuperuser --noinput && gunicorn Home.wsgi:application --bind 0.0.0.0:$PORT
 
 
