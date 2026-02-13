@@ -20,4 +20,5 @@ RUN python manage.py collectstatic --noinput
 
 # Run Django server with Gunicorn
 CMD ["gunicorn", "--bind", "0.0.0.0:8000", "Home.wsgi:application"]
+CMD python manage.py migrate && gunicorn student.wsgi:application --bind 0.0.0.0:$PORT
 
